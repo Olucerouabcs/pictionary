@@ -1,11 +1,11 @@
 {
-    "words": [
+  "words": [
       "pelota", 
       "libro", 
-      "teléfono", 
+      "telefono", 
       "silla", 
       "taza", 
-      "lámpara", 
+      "lampara", 
       "cuchillo", 
       "cepillo", 
       "plato", 
@@ -22,23 +22,23 @@
       "hablar",
       "perro", 
       "gato", 
-      "pájaro", 
+      "pajaro", 
       "pez", 
       "conejo", 
       "tigre", 
       "oso", 
       "elefante", 
       "leon", 
-      "ratón",
-      "en la playa", 
-      "en la cocina", 
-      "en el parque", 
-      "en la biblioteca", 
-      "en el trabajo", 
-      "en casa", 
-      "en el supermercado", 
-      "en la montaña", 
-      "en el jardín", 
-      "en la escuela"]
-  }
-  
+      "raton",
+      "playa", 
+      "cocina", 
+      "parque", 
+      "biblioteca", 
+      "trabajo", 
+      "casa", 
+      "supermercado", 
+      "montana", 
+      "jardin", 
+      "escuela"
+  ]
+}

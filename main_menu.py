@@ -26,12 +26,11 @@ class MainMenu:
         self.quit_button.pack(pady=5)
 
     def start_game(self):
-        # Crea una nueva ventana para el juego de Pictionary
+        
         game_window = tk.Toplevel(self.root)
         pictionary_game = PictionaryGame(game_window)
 
     def login(self):
-        # Aquí puedes implementar la función para iniciar sesión
         login_screen = LoginScreen(tk.Toplevel(self.root))
         
 

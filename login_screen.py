@@ -24,13 +24,21 @@ class LoginScreen:
         self.login_button = tk.Button(self.main_frame, text="Iniciar Sesión", command=self.login)
         self.login_button.pack(pady=10)
 
+        # Botón de registro
+        self.register_button = tk.Button(self.main_frame, text="Registrarse", command=self.register)
+        self.register_button.pack(pady=5)
+
     def login(self):
-        # Aquí puedes implementar la lógica de inicio de sesión
-        # Por ahora, simplemente cerraremos la ventana de inicio de sesión y abriremos el juego
         self.root.destroy()
-        import main_menu  # Importa el módulo del menú principal
+        import main_menu  
         root = tk.Tk()
         app = main_menu.MainMenu(root)
+
+    def register(self):
+        self.root.destroy()
+        import registration_screen
+        root = tk.Tk()
+        app = registration_screen.RegistrationScreen(root)
 
 def main():
     root = tk.Tk()
