@@ -1,6 +1,7 @@
 import tkinter as tk
 from pictionary_game import PictionaryGame
 from login_screen import LoginScreen
+from create_room_screen import CreateRoomScreen
 
 class MainMenu:
     def __init__(self, root):
@@ -27,8 +28,34 @@ class MainMenu:
 
     def start_game(self):
         
-        game_window = tk.Toplevel(self.root)
-        pictionary_game = PictionaryGame(game_window)
+        # Crear una nueva ventana para la vista de juego
+        self.play_window = tk.Toplevel(self.root)
+        self.play_window.title("Jugar")
+
+        # Botón para crear sala
+        self.create_room_button = tk.Button(self.play_window, text="Crear Sala", command=self.create_room)
+        self.create_room_button.pack(pady=5)
+
+        # Campo de entrada para el código de sala
+        self.room_code_label = tk.Label(self.play_window, text="Código de Sala:")
+        self.room_code_label.pack()
+        self.room_code_entry = tk.Entry(self.play_window)
+        self.room_code_entry.pack(pady=5)
+
+        # Botón para unirse a sala
+        self.join_room_button = tk.Button(self.play_window, text="Unirse a Sala", command=self.join_room)
+        self.join_room_button.pack(pady=5)
+
+    def create_room(self):
+        create_room_root = tk.Toplevel(self.root)
+        create_room_window = CreateRoomScreen(create_room_root)
+        print(f"Creando sala con código: {room_code}")
+
+    def join_room(self):
+        # Aquí iría la lógica para unirse a una sala
+        # Por ahora, simplemente mostramos un mensaje
+        room_code = self.room_code_entry.get()
+        print(f"Unirse a sala con código: {room_code}")
 
     def login(self):
         login_screen = LoginScreen(tk.Toplevel(self.root))
